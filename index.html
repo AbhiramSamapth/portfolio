@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiram Sampath - Portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --accent: #10a37f;
+            --text-primary: #ffffff;
+            --text-secondary: #d1d5db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            background: var(--card-bg);
+            padding: 2rem;
+        }
+
+        .nav-link {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Social Links */
+        .social-links {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            font-size: 24px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 250px;
+            padding: 3rem;
+        }
+
+        /* Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Skills */
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            background: var(--accent);
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sidebar">
+        <h1>Abhiram Sampath</h1>
+        <p>Mechanical Engineer & Developer</p>
+        
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abhiram-sampath" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/AbhiramSamapth" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Home -->
+        <section id="home" class="section">
+            <h2>Welcome</h2>
+            <p>Myself Abhiram Sampath a B.Tech Mechanical Engineering student at NIT Andhra Pradesh.</p>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.Tech Mechanical Engineering</h3>
+                <p>National Institute of Technology, Andhra Pradesh</p>
+                <p>2022-Present | CGPA: 8.61</p>
+            </div>
+            <div class="education-item">
+                <h3>Intermediate (12th)</h3>
+                <p>Narayana Junior College</p>
+                <p>2022 | 96.3%</p>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="project-card">
+                <h3>Cognifos AI - Co-Founder</h3>
+                <ul>
+                    <li>Developed AI search engine platform</li>
+                    <li>90% user satisfaction rate</li>
+                    <li>10+ active users in first quarter</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Null Class - Internship</h3>
+                <ul>
+                    <li>Reduced user errors by 60%</li>
+                    <li>Improved form submission rates by 25%</li>
+                    <li>Implemented secure authentication system</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <!-- Add all other skills -->
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>AI Calorie Tracker</h3>
+                <p>85% prediction accuracy using Machine Learning</p>
+            </div>
+            <div class="project-card">
+                <h3>Social Media Platform</h3>
+                <p>Twitter-like platform handling 10,000+ monthly posts</p>
+            </div>
+            <!-- Add all projects -->
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>Phone Number:</h3>
+                    <p>+91 7075890369</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>polamarasettiabhiram@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
